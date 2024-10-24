@@ -8,10 +8,10 @@ Create, train, and evaluate a neural network using Python to classify images of 
 
 1. **Setup Environment:**
    - Make sure you have the required libraries installed. You'll need:
-    - tensorflow
-    - keras
-    - numpy
-    - matplotlib
+     - tensorflow
+     - keras
+     - numpy
+     - matplotlib
 
 2. **Load the MNIST Dataset:**
    - The MNIST dataset is a classic dataset of 28x28 grayscale images of handwritten digits (0-9). Keras provides this dataset built-in.
@@ -22,9 +22,9 @@ Create, train, and evaluate a neural network using Python to classify images of 
 4. **Build the Neural Network:**
    - Create a simple feedforward neural network using Keras. The network will have:
 
-    - An input layer (784 nodes, corresponding to the flattened image)
-    - One hidden layer with 128 neurons and ReLU activation
-    - An output layer with 10 neurons (one for each digit, 0-9) using the softmax activation function
+     - An input layer (784 nodes, corresponding to the flattened image)
+     - One hidden layer with 128 neurons and ReLU activation
+     - An output layer with 10 neurons (one for each digit, 0-9) using the softmax activation function
 
 5. **Train the Neural Network:**
    - Fit the model to the training data for 10 epochs with a batch size of 32.
