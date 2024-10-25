@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
 
-# Load the data
+# ---------- Load the data ----------
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 # Normalize the data (scale pixel values to range 0-1)
@@ -14,7 +14,7 @@ plt.imshow(x_train[0], cmap='gray')
 plt.title(f'Label: {y_train[0]}')
 plt.show()
 
-# 2 -------------------------------------
+# ---------- Preprocess the Data ----------
 from tensorflow.keras.utils import to_categorical
 
 # Flatten the images
@@ -25,7 +25,7 @@ x_test = x_test.reshape((x_test.shape[0], 28 * 28))
 y_train = to_categorical(y_train)
 y_test = to_categorical(y_test)
 
-# 3 -------------------------------------
+# ---------- Build the Neural Network ----------
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
@@ -45,8 +45,7 @@ model.compile(
 # Summary of the model
 model.summary()
 
-# 4 ------
-# Train the model
+# ---------- Train the Neural Network ----------
 history = model.fit(
     x_train, y_train,
     epochs=10,
@@ -54,12 +53,12 @@ history = model.fit(
     validation_split=0.2  # Use 20% of the training data for validation
 )
 
-# 5 ------
+# ---------- Evaluate the Model ----------
 # Evaluate the model on the test data
 test_loss, test_accuracy = model.evaluate(x_test, y_test)
 print(f'\nTest Accuracy: {test_accuracy:.4f}')
 
-# 6 --------
+# ---------- Visualize the Training Process ----------
 # Plot training & validation accuracy values
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
@@ -69,8 +68,7 @@ plt.xlabel('Epoch')
 plt.legend(['Train', 'Validation'], loc='upper left')
 plt.show()
 
-# 7 -------
-# Make predictions
+# ---------- Make Predictions ----------
 predictions = model.predict(x_test)
 
 # Visualize a few predictions
