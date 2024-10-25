@@ -38,8 +38,7 @@ Create, train, and evaluate a neural network using Python to classify images of 
 8. **Make Predictions:**
    - Use the trained model to make predictions on the test set and visualize a few examples.
 
-**Expected Outcomes:**
+**Expected Result:**
 
-- Understanding of basic concepts of a neural network: layers, neurons, activation functions, loss functions, and optimizers.
-- Practical experience in using Keras for building and training neural networks.
-- Ability to evaluate and interpret model performance.
+<img width="300" src="https://github.com/vladtymo/Neural-Network-Task-Handwritten-Digits/blob/master/images/digit_4.png" alt="Digit 4 Predict">
+<img width="300" src="https://github.com/vladtymo/Neural-Network-Task-Handwritten-Digits/blob/master/images/digit_2.png" alt="Digit 2 Predict">
